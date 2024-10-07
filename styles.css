@@ -1,0 +1,122 @@
+/* Terminal style */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("./picture.jpg");
+    background-size: cover;
+    background-position: center;
+    cursor: none;
+}
+
+#terminal {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    width: 100%;
+    flex-grow: 1;
+    white-space: pre-wrap;
+    color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+#breadcrumb {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+#breadcrumb li {
+    padding: 5px 20px;
+    position: relative;
+    align-items: center;
+    font-size: 1.2rem;
+}
+#breadcrumb li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    border-top: 18px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 10px solid currentColor;
+    z-index: 1;
+}
+#manjaro {
+    background-color: white;
+    color: white;
+}
+#path {
+    color: green;
+    background-color: green;
+}
+#git {
+    background-color: orange;
+    color: orange;
+}
+.black {
+    color: black;
+}
+#submenu {
+    background-color: rgba(0, 0, 0, 0.8); /* Black submenu with some opacity */
+    border-top: 1px solid green;
+    color: green;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-around; /* Center the commands horizontally */
+    font-size: 0.9em; /* Slightly smaller font size to resemble terminal */
+}
+
+#submenu a {
+    padding: 10px;
+    text-decoration: none;
+    color: green;
+}
+
+#submenu a:hover {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#output {
+    white-space: pre-wrap; /* Wrap text to the next line when it exceeds container width */
+    overflow-wrap: break-word; /* Allow words to break when necessary */
+    max-width: 100%;
+    line-height: 2rem;
+}
+
+#output::after {
+    content: "|";
+    animation: blink 1s infinite step-start;
+    color: green;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#glowCursor {
+    position: absolute;
+    width: 20px; /* Width of the glowing effect */
+    height: 20px; /* Height of the glowing effect */
+    border-radius: 50%; /* Make it a circle */
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.7
+    ); /* White color with transparency */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Glowing effect */
+    pointer-events: none; /* Prevent it from interfering with other elements */
+    transition: background-color 0.2s ease; /* Smooth color change */
+}

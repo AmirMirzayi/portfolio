@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Amir Mirzaei</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="glowCursor"></div>
+        <div id="terminal">
+            <pre id="prompt">
+                <ul id="breadcrumb">
+                    <li id="manjaro"><img src="https://www.svgrepo.com/show/342012/manjaro.svg" width="20px"></li>
+                    <li id="path"><img src="https://www.svgrepo.com/show/371826/directory.svg" width="20px"><span class="black"> /home/amir/resume</span></li>
+                    <li id="git"><img src="https://www.svgrepo.com/show/426053/git.svg" width="20px"><img src="https://www.svgrepo.com/show/509958/git-branch.svg" width="20px"><span class="black"> main !3</span></li>
+                </ul>
+            </pre>
+            <pre id="output"></pre>
+        </div>
+
+        <!-- Footer for submenu commands -->
+        <div id="submenu">
+            <a href="javascript:previewinitialText();">H Home</a>
+            <a href="javascript:reloadWithExperience();">E Experiences</a>
+            <a href="javascript:reloadWithSkills();">S Skills</a>
+            <a href="javascript:reloadWithContacts();">C Contact Me</a>
+            <a href="javascript:exitTerminal();">X Exit</a>
+        </div>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
